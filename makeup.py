@@ -36,12 +36,12 @@ def makeup_store(makeup):
 
     cart = []
     total = 0
+    print("-----------------List----------------")
+    for key, value in makeup.items():
+        print(f"{key}: ${value:.2f}")
+    print("-------------------------------------")
+    
     while True:
-        print("-----------------List----------------")
-        for key, value in makeup.items():
-            print(f"{key}: ${value:.2f}")
-        print("-------------------------------------")
-
         products = input("Select the items you need (q to quit): ").lower()
         if products == "q":
             break
@@ -57,8 +57,5 @@ def makeup_store(makeup):
 #Call the main function
 main()
 #Get totals for makeup and skincare
-makeup_total = makeup_store(makeup)
-skincare_total = makeup_store(skincare)
-#Add the totals together
-total_amount = makeup_total + skincare_total
-print(f"Total for all products: ${total_amount:.2f}")
+makeup_store(makeup)
+makeup_store(skincare)
