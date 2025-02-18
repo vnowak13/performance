@@ -2,8 +2,9 @@
 # Descripiton: This program gives you a list of make products and you select the ones you need.
 #              It then calculates the total amount thr porducts cost.
 
+#the main function of the code and what begins the program
 def main():
-    question = (input("Do you want to buy some new products? (yes/no): ")).lower()
+    question = (input("Do you want to buy some new products? (yes/no): ")).lower() #an input
 
     if question == "no":
         print("Okay, see you next time!")
@@ -13,7 +14,7 @@ def main():
     else:
         print("Invalid input. Please type 'yes' or 'no'.")
         return
-
+#Two list so the code could run twice
 makeup = {"masacara": 22.00,
           "blush": 15.00,
           "foundation": 30.00,
@@ -26,20 +27,20 @@ makeup = {"masacara": 22.00,
 skincare = {"Primer": 28.00,
             "moisturizer": 17.21,
             "toner": 16.00,
-            "cleannser": 10.50,
+            "cleanser": 10.50,
             "Sunscreen": 18.00,
             "serums": 14.92}
-
+#The function 
 def makeup_store(makeup):
 
-    cart = []
+    cart = [] #open dictonary
     total = 0
     print("-----------------List----------------")
-    for key, value in makeup.items():
+    for key, value in makeup.items(): #the interation 
         print(f"{key}: ${value:.2f}")
     print("-------------------------------------")
     
-    while True:
+    while True: #a while loop
         products = input("Select the items you need (q to quit): ").lower()
         if products == "q":
             break
@@ -50,7 +51,7 @@ def makeup_store(makeup):
         total += makeup.get(products)
         print(products, end=" ")
     print()
-    print(f"Total is: ${total:.2f}")
+    print(f"Total is: ${total:.2f}") #an input
 
 #Call the main function
 main()
