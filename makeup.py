@@ -1,6 +1,4 @@
 # Makeup  calculator
-# Author: Victoria Nowak
-# Date: 02/07/2025
 # Descripiton: This program gives you a list of make products and you select the ones you need.
 #              It then calculates the total amount thr porducts cost.
 
